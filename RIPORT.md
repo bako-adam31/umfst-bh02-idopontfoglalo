@@ -21,7 +21,7 @@ beallitott 8 fos napi limit ellenere a rendszer engedte a 9. beteg regisztracioj
 - **Gyökérok (sor + magyarázat):** 
 Az `app.js` 35. soraban a feltetel hibasan `foglalasok.length > MAX_NAPI` volt. A 8. elemnel a `8 > 8` feltetel hamis eredmenyt adott, igy a 9. elem is bekerult a tombbe.
 - **Javítás (commit link):** 
-*Commit link:* 
+*Commit link:* https://github.com/bako-adam31/umfst-bh02-idopontfoglalo/commit/1926ad68ca5d87c4ed57a0d1731b2a2f2cd46594
 - **Hogyan tesztelted (kézi tesztlépések, konzolos ellenőrzés vagy egységteszt):** 
 Kezzel teszteltem a bongeszoben
 - **Tanulság / érintett alapelv:** 
@@ -29,11 +29,15 @@ mindig figyelni kell a relacios operatorok pontos hasznalatara
 
 ## 3. hiba
 - **Hiba leírása és reprodukálása:** 
+A rogzitett idopontok nem idorendi sorrendben jelentek meg a listaban
 - **Gyökérok (sor + magyarázat):** 
+Az `app.js` 16. soraban a `foglalasok.sort()` fuggveny komparatora boole ertket adott vissza a vart szam helyett.
 - **Javítás (commit link):** 
 *Commit link:* 
 - **Hogyan tesztelted (kézi tesztlépések, konzolos ellenőrzés vagy egységteszt):** 
+Kezzel teszteltem: keszitettem egy 10:00-s es egy 08:30-as foglalast
 - **Tanulság / érintett alapelv:** 
+Az `Array.prototype.sort()` komparatoranak mindig szamot kell visszaadnia.
 
 ## 4. hiba
 - **Hiba leírása és reprodukálása:** 
