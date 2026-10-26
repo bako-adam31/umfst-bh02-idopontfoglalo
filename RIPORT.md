@@ -57,7 +57,7 @@ Torles akciot billentyuzetrol nem lehetett fokuszba hozni
 - **Gyökérok (sor + magyarázat):** 
 Az `app.js` `render()` a `Törlés` elem egy nem interaktiv `<span>` tagkent lett letrehozva.
 - **Javítás (commit link):** 
-*Commit link:* 
+*Commit link:* https://github.com/bako-adam31/umfst-bh02-idopontfoglalo/commit/f770c0d5a5810d53b1262b23c722fb56771c7fa6
 - **Hogyan tesztelted (kézi tesztlépések, konzolos ellenőrzés vagy egységteszt):** 
 a Tab billentyuvel elerhetove valt a `Törlés` gomb
 - **Tanulság / érintett alapelv:** 
@@ -65,12 +65,16 @@ Minden felhasznaloi action-hez szemantikus `<button>` elemet kell hasznalni
 
 ## 6. hiba
 - **Hiba leírása és reprodukálása:** 
+Sok (50+) foglalas eseten az oldal renderelese erezhetoen belassult
 - **Gyökérok (sor + magyarázat):** 
+Az `app.js` `render()` fuggvenye minden elem beszurasakor kozvetlenul modositotta az aktiv DOM-ot, valamint a ciklus minden egyes gombra  eseménykezelot regisztralt.
 - **Javítás (commit link):** 
 *Commit link:* 
 - **Hogyan tesztelted (kézi tesztlépések, konzolos ellenőrzés vagy egységteszt):** 
+generaltam 50 foglalast a konzolbol `foglalasok` tombbe, majd meghivtam a `render()` fuggvenyt es a DevTools Performanceben ellenoriztem a renderelesi idot
 - **Tanulság / érintett alapelv:** 
+DOM-epitesnel mindig memoriabeli kontenert kell hasznalni
 
 ## Összegzés
-- Mit tanultam: 
+- Mit tanultam:
 - Melyik alapelv sérült a leggyakrabban: 

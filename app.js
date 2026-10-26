@@ -21,9 +21,12 @@ function render() {
 
   var lista = document.getElementById('lista');
   lista.innerHTML = '';
+  var fragment = document.createDocumentFragment();
+
   foglalasok.forEach(function (f, i) {
     var sor = document.createElement('div');
     sor.className = 'sor';
+
     var szoveg = document.createElement('span');
     szoveg.textContent = f.ido + ' - ' + f.nev;
 
@@ -32,22 +35,24 @@ function render() {
     var torol = document.createElement('button');
     torol.type = 'button';
     torol.className = 'torol';
-    //torol.dataset.i = i;
+    torol.dataset.i = i;
     torol.textContent = 'Törlés';
 
     sor.appendChild(szoveg);
     sor.appendChild(torol);
     lista.appendChild(sor);
   });
-
-  document.querySelectorAll('.torol').forEach(function (el) {
-    el.addEventListener('click', function () {
-      foglalasok.splice(Number(el.dataset.i), 1);
-      ment();
-      render();
-    });
-  });
+  lista.appendChild(fragment);
 }
+
+document.getElementById('lista').addEventListener('click', function (e) {
+  if (e.target && e.target.classList.contains('torol')) {
+    var index = Number(e.target.dataset.i);
+    foglalasok.splice(index, 1);
+    ment();
+    render();
+  }
+});
 
 document.getElementById('f').addEventListener('submit', function (e) {
   e.preventDefault();
