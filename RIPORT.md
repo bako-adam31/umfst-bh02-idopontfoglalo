@@ -76,5 +76,5 @@ generaltam 50 foglalast a konzolbol `foglalasok` tombbe, majd meghivtam a `rende
 DOM-epitesnel mindig memoriabeli kontenert kell hasznalni
 
 ## Összegzés
-- Mit tanultam:
-- Melyik alapelv sérült a leggyakrabban: 
+- Mit tanultam: A bongeszeros webalkalmazasok fejlesztesekor a dinamikus adatkezeles, a tipusegyezoseg, a biztonsagos bemenet-kezeles elleni vedelem, valamint a hatekony DOM-kezeles
+- Melyik alapelv sérült a leggyakrabban: A korabbi kod nem a megfelelo tipusu fuggvenyeket es HTML elemeket hasznalta, ami serulekenyseghez, teljesitmenyromlashoz vezetett.

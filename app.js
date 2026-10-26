@@ -51,6 +51,7 @@ document.getElementById('lista').addEventListener('click', function (e) {
     foglalasok.splice(index, 1);
     ment();
     render();
+    
   }
 });
 
