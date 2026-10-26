@@ -45,7 +45,7 @@ a beteg nevekent egy HTML kodreszletet adtak meg
 - **Gyökérok (sor + magyarázat):** 
 Az `app.js` 22. soraban a `render()` az `innerHTML` hasznalta a HTML osszeallitasara. A bongeszo a beirt szoveget ervenyes HTML tagkent ertelmezte es futtatta.
 - **Javítás (commit link):** 
-*Commit link:* 
+*Commit link:* https://github.com/bako-adam31/umfst-bh02-idopontfoglalo/commit/36a36d73aea7ee7ad22cc941d0264595adf1aadc
 - **Hogyan tesztelted (kézi tesztlépések, konzolos ellenőrzés vagy egységteszt):** 
 Felvettem egy foglalast az XSS tartalmazo nevvel. A nev szovegkent jelent meg az oldalon, a JavaScript kod nem futott le, es a hatterszin sem valtozott meg.
 - **Tanulság / érintett alapelv:** 
@@ -53,11 +53,15 @@ Felhasznaloi bevitelt soha nem szabad kozvetlenul `innerHTML`-be illeszteni
 
 ## 5. hiba
 - **Hiba leírása és reprodukálása:** 
+Torles akciot billentyuzetrol nem lehetett fokuszba hozni
 - **Gyökérok (sor + magyarázat):** 
+Az `app.js` `render()` a `Törlés` elem egy nem interaktiv `<span>` tagkent lett letrehozva.
 - **Javítás (commit link):** 
 *Commit link:* 
 - **Hogyan tesztelted (kézi tesztlépések, konzolos ellenőrzés vagy egységteszt):** 
+a Tab billentyuvel elerhetove valt a `Törlés` gomb
 - **Tanulság / érintett alapelv:** 
+Minden felhasznaloi action-hez szemantikus `<button>` elemet kell hasznalni
 
 ## 6. hiba
 - **Hiba leírása és reprodukálása:** 
