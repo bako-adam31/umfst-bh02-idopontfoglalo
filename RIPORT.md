@@ -33,7 +33,7 @@ A rogzitett idopontok nem idorendi sorrendben jelentek meg a listaban
 - **Gyökérok (sor + magyarázat):** 
 Az `app.js` 16. soraban a `foglalasok.sort()` fuggveny komparatora boole ertket adott vissza a vart szam helyett.
 - **Javítás (commit link):** 
-*Commit link:* 
+*Commit link:* https://github.com/bako-adam31/umfst-bh02-idopontfoglalo/commit/789c4a4a2b14e9de7f24772723b14cac838acd98
 - **Hogyan tesztelted (kézi tesztlépések, konzolos ellenőrzés vagy egységteszt):** 
 Kezzel teszteltem: keszitettem egy 10:00-s es egy 08:30-as foglalast
 - **Tanulság / érintett alapelv:** 
@@ -41,11 +41,15 @@ Az `Array.prototype.sort()` komparatoranak mindig szamot kell visszaadnia.
 
 ## 4. hiba
 - **Hiba leírása és reprodukálása:** 
+a beteg nevekent egy HTML kodreszletet adtak meg
 - **Gyökérok (sor + magyarázat):** 
+Az `app.js` 22. soraban a `render()` az `innerHTML` hasznalta a HTML osszeallitasara. A bongeszo a beirt szoveget ervenyes HTML tagkent ertelmezte es futtatta.
 - **Javítás (commit link):** 
 *Commit link:* 
 - **Hogyan tesztelted (kézi tesztlépések, konzolos ellenőrzés vagy egységteszt):** 
+Felvettem egy foglalast az XSS tartalmazo nevvel. A nev szovegkent jelent meg az oldalon, a JavaScript kod nem futott le, es a hatterszin sem valtozott meg.
 - **Tanulság / érintett alapelv:** 
+Felhasznaloi bevitelt soha nem szabad kozvetlenul `innerHTML`-be illeszteni
 
 ## 5. hiba
 - **Hiba leírása és reprodukálása:** 
