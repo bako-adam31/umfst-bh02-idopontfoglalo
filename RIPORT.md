@@ -10,8 +10,10 @@ Az `app.js` 12. soraban a `foglalt(ido)` fuggveny a `foglalasok.indexOf(ido)` me
 - **Javítás (commit link):** 
 *Commit link:* 
 - **Hogyan tesztelted (kézi tesztlépések, konzolos ellenőrzés vagy egységteszt):** 
+Kezzel teszteltem: felvettem egy foglalast 09:00-ra, majd megprobaltam ujra foglalni 09:00-ra.
 
 - **Tanulság / érintett alapelv:** 
+A tomb primitiv keresofuggvenyei (`indexOf`) helyett a keresofuggvenyeket (`some`) kell hasznalni.
 
 ## 2. hiba
 - **Hiba leírása és reprodukálása:** 
